@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-image: url(../img/bg.png);
+    background: linear-gradient(72deg, #7d34e3,#be94f7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Design img {
+    width: 100%;
+    position: absolute;
+    position: fixed;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
+li .txt-navbar {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px;
+}
+
+li .txt-navbar:hover {
+    color: #be94f7;
+}
+
+.btn-navbar {
+    background-color: #fff;
+    color: #7d34e3;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.btn-navbar:hover {
+    background-color: #7d34e3;
+    color: #fff;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content p {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.content .txt-Online {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn-content {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.btn-content:hover {
+    background-color: #fff;
+    color: #7d34e3;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.txt-content {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.txt-content:hover {
+    color: #be94f7;
+}
+
+.réseaux {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    align-items: center;
+}
+
+.réseaux-collone img {
+    width: 30px;
+    margin: 20px;
+}
+
+.réseaux-collone img:hover {
+    transform: scale(1.2);
+}
+
+.réseaux-collone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+@media (max-width:770px) {
+    body {
+        background: linear-gradient(72deg, #7d34e3,#be94f7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .menu {
+        display: none;
+    }
+
+    .Design img {
+        display: none;
+    }
+
+    .menu_toggle{
+        z-index: 10;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu_toggle::before {
+        position: absolute;
+        content: "";
+        transform: translateY(-10px);
+        width: 28px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 6px 10px #fff;
+        transition: 0.5s;
+    }
+
+    .menu_toggle::after {
+        position: absolute;
+        content: "";
+        transform: translateY(10px);
+        width: 28px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 6px -10px #fff;
+        transition: 0.5s;
+    }
+
+    .menu_toggle.active::before {
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0px 0px #fff;
+    }
+
+    .menu_toggle::after {
+        position: absolute;
+        content: "";
+        transform: translateY(10px);
+        width: 28px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 6px;
+        transition: 0.5s;
+      
+    }
+    .menu_toggle.active::after {
+        transform: rotate(-135deg);
+    }
+
+    header .menu.responsive {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    header .menu.responsive  li {
+        margin: 10px 0;
+    }
+
+    .réseaux-collone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-right: 70px;
+    }
+}
